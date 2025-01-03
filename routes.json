@@ -1,17 +1,112 @@
 [
-    {
-      "filepath": "./public/Angular.md",
-      "routes": [
-        { "endpoint": "/angular", "title": "Angular Interview Questions" },
-        { "endpoint": "/mean-stack/angular", "title": "Mean Stack Questions" }
-      ]
+  {
+    "files": {
+      "./public/js/Angular.md": {
+        "name": "Angular",
+        "routes": [
+          {
+            "endpoint": "/angular-interview-question",
+            "details": { "title": "Angular Interview Question" }
+          }
+     
+        ]
+      },
+      "./public/js/JavaScript.md": {
+        "name": "JavaScript",
+        "routes": [
+          {
+            "endpoint": "/javascript-interview-question",
+            "details": { "title": "JavaScript Interview Question" }
+          }
+        ]
+      },
+      "./public/database/MongoDB.md": {
+        "name": "MongoDB",
+        "routes": [
+          {
+            "endpoint": "/mongodb-interview-question",
+            "details": { "title": "MongoDB Interview Question" }
+          }
+        ]
+      },
+      "./public/js/TypeScript.md": {
+        "name": "TypeScript",
+        "routes": [
+          {
+            "endpoint": "/typescript-interview-question",
+            "details": { "title": "TypeScript Interview Question" }
+          }
+        ]
+      },
+      "./public/database/Mysql.md": {
+        "name": "MySQL",
+        "routes": [
+          {
+            "endpoint": "/mysql-interview-question",
+            "details": { "title": "MySQL Interview Question" }
+          }
+        ]
+      },
+      "./public/js/Node-Js.md": {
+        "name": "Node Js",
+        "routes": [
+          {
+            "endpoint": "/node-js-interview-question",
+            "details": { "title": "Node Js Interview Question" }
+          }
+        ]
+      },
+      "./public/aws/AWS.md": {
+        "name": "AWS",
+        "routes": [
+          {
+            "endpoint": "/aws-interview-question",
+            "details": { "title": "AWS Interview Question" }
+          }
+        ]
+      },
+      "./public/aws/AWS-Lambda.md": {
+        "name": "AWS Lambda",
+        "routes": [
+          {
+            "endpoint": "/aws-lambda-serverless-interview-question",
+            "details": { "title": "AWS Lambda Serverless Interview Question" }
+          }
+        ]
+      },
+      "./public/aws/Docker.md": {
+        "name": "Docker and Kubernetes",
+        "routes": [
+          {
+            "endpoint": "/docker-and-kubernetes-interview-question",
+            "details": { "title": "Docker and Kubernetes Interview Question" }
+          }
+        ]
+      }
     },
-    {
-      "filepath": "./public/JavaScript.md",
-      "routes": [
-        { "endpoint": "/javascript", "title": "JavaScript Interview Questions" },
-        { "endpoint": "/mean-stack/javascript", "title": "Full-Stack JS Questions" }
+    "groups": {
+      "Angular": [
+        "/angular-interview-question"
+      ],
+      "AWS and Docker": [
+        "/aws-interview-question",
+        "/docker-and-kubernetes-interview-question",
+        "/aws-lambda-serverless-interview-question"
+      ],
+      "JavaScript/Node Js": [
+        "/javascript-interview-question",
+        "/node-js-interview-question",
+        "/typescript-interview-question"
+      ],
+      "MEAN Stack": [
+        "/javascript-interview-question",
+        "/angular-interview-question",
+        "/typescript-interview-question",
+        "/mysql-interview-question",
+        "/node-js-interview-question",
+        "/mongodb-interview-question"
       ]
     }
-  ]
+  }
   
+]

@@ -1,77 +1,89 @@
-<!--
-title: 'Serverless Framework Node Express API on AWS'
-description: 'This template demonstrates how to develop and deploy a simple Node Express API running on AWS Lambda using the Serverless Framework.'
-layout: Doc
-framework: v4
-platform: AWS
-language: nodeJS
-priority: 1
-authorLink: 'https://github.com/serverless'
-authorName: 'Serverless, Inc.'
-authorAvatar: 'https://avatars1.githubusercontent.com/u/13742415?s=200&v=4'
--->
+# Interview Question Repository
 
-# Serverless Framework Node Express API on AWS
+Welcome to the Interview Question Repository! This project aims to provide a centralized platform for developers to share and access interview questions across various technologies. Each technology has its corresponding `.md` file for documentation and is associated with specific routes defined in `routes.json`.
 
-This template demonstrates how to develop and deploy a simple Node Express API service running on AWS Lambda using the Serverless Framework.
+## Use Case
+The purpose of this repository is to organize and share interview questions efficiently. Developers contributing to this repository are expected to:
 
-This template configures a single function, `api`, which is responsible for handling all incoming requests using the `httpApi` event. To learn more about `httpApi` event configuration options, please refer to [httpApi event docs](https://www.serverless.com/framework/docs/providers/aws/events/http-api/). As the event is configured in a way to accept all incoming requests, the Express.js framework is responsible for routing and handling requests internally. This implementation uses the `serverless-http` package to transform the incoming event request payloads to payloads compatible with Express.js. To learn more about `serverless-http`, please refer to the [serverless-http README](https://github.com/dougmoscrop/serverless-http).
+1. Update the respective `.md` file for the technology they are working on.
+2. If introducing a new technology or category, create a new `.md` file and add the corresponding route to `routes.json`.
 
-## Usage
+## Technologies and Routes
+Below is the list of technologies covered and their respective routes:
 
-### Deployment
+### Angular
+- **File:** `./public/js/Angular.md`
+- **Route:** `/angular-interview-question`
+- **Title:** Angular Interview Question
 
-Install dependencies with:
+### JavaScript
+- **File:** `./public/js/JavaScript.md`
+- **Route:** `/javascript-interview-question`
+- **Title:** JavaScript Interview Question
 
-```
-npm install
-```
+### MongoDB
+- **File:** `./public/database/MongoDB.md`
+- **Route:** `/mongodb-interview-question`
+- **Title:** MongoDB Interview Question
 
-and then deploy with:
+### TypeScript
+- **File:** `./public/js/TypeScript.md`
+- **Route:** `/typescript-interview-question`
+- **Title:** TypeScript Interview Question
 
-```
-serverless deploy
-```
+### MySQL
+- **File:** `./public/database/Mysql.md`
+- **Route:** `/mysql-interview-question`
+- **Title:** MySQL Interview Question
 
-After running deploy, you should see output similar to:
+### Node Js
+- **File:** `./public/js/Node-Js.md`
+- **Route:** `/node-js-interview-question`
+- **Title:** Node Js Interview Question
 
-```
-Deploying "aws-node-express-api" to stage "dev" (us-east-1)
+### AWS
+- **File:** `./public/aws/AWS.md`
+- **Route:** `/aws-interview-question`
+- **Title:** AWS Interview Question
 
-✔ Service deployed to stack aws-node-express-api-dev (96s)
+### AWS Lambda
+- **File:** `./public/aws/AWS-Lambda.md`
+- **Route:** `/aws-lambda-serverless-interview-question`
+- **Title:** AWS Lambda Serverless Interview Question
 
-endpoint: ANY - https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com
-functions:
-  api: aws-node-express-api-dev-api (2.3 kB)
-```
+### Docker and Kubernetes
+- **File:** `./public/aws/Docker.md`
+- **Route:** `/docker-and-kubernetes-interview-question`
+- **Title:** Docker and Kubernetes Interview Question
 
-_Note_: In current form, after deployment, your API is public and can be invoked by anyone. For production deployments, you might want to configure an authorizer. For details on how to do that, refer to [`httpApi` event docs](https://www.serverless.com/framework/docs/providers/aws/events/http-api/).
+## Groups
+The repository also organizes routes into broader categories:
 
-### Invocation
+- **Angular**
+  - `/angular-interview-question`
 
-After successful deployment, you can call the created application via HTTP:
+- **AWS and Docker**
+  - `/aws-interview-question`
+  - `/docker-and-kubernetes-interview-question`
+  - `/aws-lambda-serverless-interview-question`
 
-```
-curl https://xxxxxxx.execute-api.us-east-1.amazonaws.com/
-```
+- **JavaScript/Node Js**
+  - `/javascript-interview-question`
+  - `/node-js-interview-question`
+  - `/typescript-interview-question`
 
-Which should result in the following response:
+- **MEAN Stack**
+  - `/javascript-interview-question`
+  - `/angular-interview-question`
+  - `/typescript-interview-question`
+  - `/mysql-interview-question`
+  - `/node-js-interview-question`
+  - `/mongodb-interview-question`
 
-```json
-{ "message": "Hello from root!" }
-```
+## Contribution Guidelines
+1. To contribute, update the `.md` file corresponding to your changes.
+2. If adding a new technology, include the route in `routes.json`.
+3. Follow the structure provided in the existing `.md` files for consistency.
 
-### Local development
-
-The easiest way to develop and test your function is to use the `dev` command:
-
-```
-serverless dev
-```
-
-This will start a local emulator of AWS Lambda and tunnel your requests to and from AWS Lambda, allowing you to interact with your function as if it were running in the cloud.
-
-Now you can invoke the function as before, but this time the function will be executed locally. Now you can develop your function locally, invoke it, and see the results immediately without having to re-deploy.
-
-When you are done developing, don't forget to run `serverless deploy` to deploy the function to the cloud.
-"# -growupmyskills" 
+## License
+This repository is open-source and contributions are welcome from all developers.

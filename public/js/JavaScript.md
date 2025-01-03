@@ -1,26 +1,4 @@
-## Technology Docs
 
-- [Angular](Angular.md)  
-- [MongoDB](MongoDB.md)  
-- [MySQL](Mysql.md)  
-- [Node.js](Node-Js.md)  
-- [TypeScript](TypeScript.md)  
-- [JavaScript](JavaScript.md)
-# JavaScript Interview Questions
-
-A collection of JavaScript interview questions and answers categorized by difficulty.
-
----
-
-## Table of Contents
-1. [Basic Questions](#basic-questions)
-2. [Intermediate Questions](#intermediate-questions)
-3. [Advanced Questions](#advanced-questions)
-4. [Expert-Level Questions](#expert-level-questions)
-
----
-
-## Basic Questions
 
 1. **What are JavaScript data types?**
    - **Answer**: String, Number, Boolean, Undefined, Null, Object, Symbol, and BigInt.
@@ -1115,3 +1093,4 @@ Sure! Here are additional JavaScript-related questions and answers:
 
 
 ---
+
