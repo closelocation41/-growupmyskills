@@ -4,7 +4,6 @@ org: sandeepnath41
 app: growupmyskills
 # "service" is the name of this project. This will also be added to your AWS resource names.
 service: growupmyskills
-
 provider:
   name: aws
   runtime: nodejs20.x
