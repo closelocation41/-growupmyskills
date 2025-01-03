@@ -1,0 +1,33 @@
+
+<script>
+    // Function to create a copy button and append it next to each <pre> tag
+    document.querySelectorAll('pre').forEach((preTag) => {
+      // Create a copy button for each <pre> block
+      const copyButton = document.createElement('button');
+      copyButton.classList.add('copy-button');
+      copyButton.innerText = 'Copy';
+
+      // Add the button inside the <pre> tag
+      preTag.appendChild(copyButton);
+
+      // Add click event listener to the copy button
+      copyButton.addEventListener('click', () => {
+        const code = preTag.querySelector('code');  // Get the <code> inside <pre>
+
+        // Use the Clipboard API to copy text
+        navigator.clipboard.writeText(code.textContent).then(() => {
+                 // Change button text to "Copied!"
+          copyButton.innerHTML = 'Copied!';
+          copyButton.style.color ="green"
+          copyButton.style.background ="white"
+        }).catch((err) => {
+         copyButton.style.color ="red"
+          copyButton.style.background ="white"
+          copyButton.innerHTML = 'Copied Error';
+        });
+      });
+    });
+  </script>
+  <!-- Bootstrap JS (Optional for interactivity) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

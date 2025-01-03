@@ -1,0 +1,28 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: sandeepnath41
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: growupmyskills
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: growupmyskills
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  stage: dev
+  region: ap-south-1
+  apiGateway:
+    shouldStartNameWithService: true
+
+functions:
+  api:
+    handler: server.handler
+    events:
+      - httpApi:
+          path: "/{proxy+}" # Catch-all route for dynamic endpoints
+          method: ANY
+plugins:
+  - serverless-offline
+
+custom:
+  serverless-offline:
+    httpPort: 3000

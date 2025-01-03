@@ -1,0 +1,17 @@
+[
+    {
+      "filepath": "./public/Angular.md",
+      "routes": [
+        { "endpoint": "/angular", "title": "Angular Interview Questions" },
+        { "endpoint": "/mean-stack/angular", "title": "Mean Stack Questions" }
+      ]
+    },
+    {
+      "filepath": "./public/JavaScript.md",
+      "routes": [
+        { "endpoint": "/javascript", "title": "JavaScript Interview Questions" },
+        { "endpoint": "/mean-stack/javascript", "title": "Full-Stack JS Questions" }
+      ]
+    }
+  ]
+  
