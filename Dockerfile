@@ -13,5 +13,5 @@ RUN npm install
 # Copy the rest of the application code to the container
 COPY . .
 
-# Set the Lambda handler as the first argument
+# Set the Lambda handler
 CMD ["server.handler"]
