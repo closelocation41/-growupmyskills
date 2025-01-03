@@ -1,20 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-  <title>Interview Questions by Group</title>
+    <meta charset="utf-8" />
+    <%- include('head') %> <!-- Include the head partial -->
+
+
 </head>
+
 <body>
-  <h1>Interview Questions by Group</h1>
-  <ul>
-    <% for (const [group, routes] of Object.entries(groupedRoutes)) { %>
-      <li><strong><%= group %></strong>
-        <ul>
-          <% routes.forEach((route) => { %>
-            <li><a href="<%= route.endpoint %>"><%= route.title %></a></li>
-          <% }); %>
-        </ul>
-      </li>
-    <% } %>
-  </ul>
+    <!-- Begin page -->
+    <div class="wrapper">
+
+        <!-- Menu -->
+        <!-- Sidenav Menu Start -->
+        <%- include('sidenav') %> <!-- Include the header partial -->
+            <!-- Sidenav Menu End -->
+
+            <!-- Topbar Start -->
+            <%- include('header') %> <!-- Include the header partial -->
+                <!-- Topbar End -->
+
+
+
+                <!-- ============================================================== -->
+                <!-- Start Page Content here -->
+                <!-- ============================================================== -->
+
+                <div class="page-content">
+
+
+                    <div class="page-title-head d-flex align-items-center gap-2">
+                        <div class="flex-grow-1">
+                            <h4 class="fs-18 fw-bold mb-0">Starter</h4>
+                        </div>
+
+                        <div class="text-end">
+                            <ol class="breadcrumb m-0 py-0 fs-13">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Abstack</a></li>
+
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Pages</a></li>
+
+                                <li class="breadcrumb-item active">Starter</li>
+                            </ol>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="page-container">
+                        <div class="row row-cols-xxl-1 row-cols-md-2 row-cols-1">
+                            <% let groupIndex = 0; %>  <!-- Initialize a variable to track the iteration -->
+                    <% for (const [group, routes] of Object.entries(groupedRoutes)) { %>
+                        <% if (groupIndex >= 24) { %>  <!-- Stop after 3 groups -->
+                            <% break; %>  <!-- Break the loop after 3 groups -->
+                        <% } %>
+                    
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start gap-2 justify-content-between">
+                                        <div>
+                                            <h5 class="text-muted fs-13 fw-bold text-uppercase" title="Revenue">
+                                                Total Revenue</h5>
+                                            <h3 class="mt-2 mb-1 fw-bold"> <%= group %></h3>
+                                            <p class="mb-0 text-muted">
+                                            
+                                       
+                                                <% routes.forEach((route) => { %>
+                                                   <a href="<%= route.endpoint %>"><span  class="text-dark text-sn" style="font-size: 12px;" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="<%= route.title %>">
+                                                    <%= route.title.split(' ').slice(0, 5).join(' ') %>...</span></a>  |
+                                                <% }); %>
+                                            </p>
+                                        </div>
+                                        <div class="avatar-lg flex-shrink-0">
+                                            <span class="avatar-title bg-success-subtle text-success rounded fs-28">
+                                                <iconify-icon icon="solar:wallet-bold-duotone"></iconify-icon>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                              
+                            </div>
+                        </div><!-- end col -->
+                    
+                        <% groupIndex++; %>  <!-- Increment groupIndex -->
+                    <% } %>
+                        </div><!-- end row -->
+
+
+
+                    </div>
+                    <!-- container -->
+
+                    
+                   
+                    
+                    <!-- Footer Start -->
+                    <%- include('footer') %> <!-- Include the footer partial -->
+                        <!-- end Footer -->
+
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Page content -->
+                <!-- ============================================================== -->
+
+    </div>
+    <!-- END wrapper -->
+
+
+
+    <!-- Vendor js -->
+    <script src="assets/js/vendor.min.js"></script>
+
+    <!-- App js -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Apex Chart js -->
+    <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+
+    <!-- Projects Analytics Dashboard App js -->
+    <script src="assets/js/pages/dashboard.js"></script>
 </body>
+
 </html>
