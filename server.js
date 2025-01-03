@@ -9,6 +9,7 @@ const app = express();
 
 // Initialize Showdown converter
 const converter = new showdown.Converter();
+app.use(express.static("public"));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Set up EJS

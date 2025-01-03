@@ -1,0 +1,84 @@
+<div class="sidenav-menu">
+
+    <!-- Brand Logo -->
+    <a href="index.html" class="logo">
+        <span class="logo-light">
+            <span class="logo-lg"><img src="assets/images/logo.png" alt="logo"></span>
+            <span class="logo-sm"><img src="assets/images/logo-sm.png" alt="small logo"></span>
+        </span>
+
+        <span class="logo-dark">
+            <span class="logo-lg"><img src="assets/images/logo-dark.png" alt="dark logo"></span>
+            <span class="logo-sm"><img src="assets/images/logo-sm.png" alt="small logo"></span>
+        </span>
+    </a>
+
+    <!-- Full Sidebar Menu Close Button -->
+    <button class="button-close-fullsidebar">
+        <i class="ri-close-line align-middle"></i>
+    </button>
+
+    <div data-simplebar>
+
+        <!--- Sidenav Menu -->
+        <ul class="side-nav">
+            <li class="side-nav-title">Technology Skills</li>
+
+            <li class="side-nav-item">
+                <a href="/" class="side-nav-link">
+                    <span class="menu-icon"><i data-lucide="airplay"></i></span>
+                    <span class="menu-text"> Home </span>
+                    <span class="badge bg-danger rounded">3</span>
+                </a>
+            </li>
+
+            <% for (const [group, routes] of Object.entries(groupedRoutes)) { %>
+
+
+                <li class="side-nav-item">
+                    <a data-bs-toggle="collapse" href="#<%= group.toLowerCase().replace(/ /g, '-') %>"
+                        aria-expanded="false" aria-controls="sidebarInvoice" class="side-nav-link">
+                        <span class="menu-icon"><i data-lucide="file-text"></i></span>
+                        <span class="menu-text">
+                            <%= group %>
+                        </span>
+                        
+                    </a>
+                    <div class="collapse" id="<%= group.toLowerCase().replace(/ /g, '-') %>">
+                        <ul class="sub-menu">
+                            <% routes.forEach((route)=> { %>
+                                <li class="side-nav-item">
+                                    <a href="<%= route.endpoint %>" class="side-nav-link">
+                                 
+                                        <span  class="text-dark text-sn" style="font-size: 12px;" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="<%= route.title %>">
+                                            <%= route.title.split(' ').slice(0, 3).join(' ') %>...</span>
+                                        
+                                    </a>
+                                </li>
+                                <% }); %>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <% } %>
+
+
+                
+
+              
+
+
+
+
+
+
+                    <li class="side-nav-title">More</li>
+
+
+
+        </ul>
+
+        <div class="clearfix"></div>
+    </div>
+</div>
